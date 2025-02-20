@@ -9,6 +9,8 @@ import TikTokPixel from "@/components/TikTokPixel";
 import WhatsappBtn from "@/components/WhatsappBtn";
 import StructuredDataMetadata from "@/components/StructuredDataMetadata";
 
+export const dynamic = "force-dynamic";
+
 const rubik = Rubik({
   subsets: ["latin-ext"],
 });

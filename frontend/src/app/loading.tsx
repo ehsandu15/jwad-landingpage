@@ -3,6 +3,8 @@ import { imagePrefixPath } from "@/utils/image-path";
 import Image from "next/image";
 import React from "react";
 
+export const dynamic = "force-dynamic";
+
 const Loading = async () => {
   const logoResponse = await getLogo();
   return (
