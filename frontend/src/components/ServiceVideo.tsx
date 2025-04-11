@@ -30,7 +30,7 @@ const ServiceVideo = ({
       preload="metadata"
       onMouseOver={handlePlay}
       onMouseLeave={handlePause}
-      className="w-full object-cover object-center aspect-[3/2]"
+      className="w-full object-cover object-center aspect-[3/2] rounded-lg"
     >
       {children}
     </video>

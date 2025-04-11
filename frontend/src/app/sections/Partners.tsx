@@ -18,7 +18,7 @@ const Partners = async () => {
           {partnersList.data?.map((partner, idx) => (
             <li
               className={twc(
-                "bg-main flex items-center justify-center px-8 py-7 shadow-service-box",
+                "bg-main flex items-center justify-center px-8 py-7 shadow-service-box max-md:px-4 max-md:py-3",
                 "w-[calc(50%-1rem)] h-[120px]",
                 idx > partnersList.data.length - 4
                   ? "lg:flex-1"

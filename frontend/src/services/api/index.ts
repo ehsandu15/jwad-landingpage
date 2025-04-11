@@ -9,13 +9,13 @@ import {
 } from "@/types/strapi";
 import qs from "qs";
 
-const apiURL = `${process.env.NEXT_PUBLIC_BASE_URL_PROTOCOL}://${process.env.NEXT_PUBLIC_BASE_URL}`;
-const devBASE_URL = `${apiURL}:${process.env.NEXT_PUBLIC_BASE_URL_PORT}`;
-const productionBASE_URL = `${apiURL}`;
-const environment = process.env.NODE_ENV;
+// const apiURL = `${process.env.NEXT_PUBLIC_BASE_URL_PROTOCOL}://${process.env.NEXT_PUBLIC_BASE_URL}`;
+// const devBASE_URL = `${apiURL}:${process.env.NEXT_PUBLIC_BASE_URL_PORT}`;
+// const productionBASE_URL = `${apiURL}`;
+// const environment = process.env.NODE_ENV;
+// export const BASE_URL = process.env.NEXT_PUBLIC_STRAPI_URL;
 
-export const BASE_URL =
-  environment === "development" ? devBASE_URL : productionBASE_URL;
+export const BASE_URL =  process.env.NEXT_PUBLIC_STRAPI_URL;
 
 type HeaderType = IStrapiBaseAttributes & {
   logo: {
@@ -748,6 +748,7 @@ export async function getMetaStructuredData(): Promise<
     url.search = queryBuilder;
 
     const res = await fetch(url.href, { next: { revalidate: 1800 } });
+
     const data = await res.json();
     return data;
   } catch (error) {

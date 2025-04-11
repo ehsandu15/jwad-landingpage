@@ -2,6 +2,7 @@ import { IStrapiImage } from "@/types/strapi";
 import { imagePrefixPath } from "@/utils/image-path";
 import React, { useMemo } from "react";
 import { TfiClose } from "react-icons/tfi";
+// @ts-ignore
 import ImageGallery from "react-image-gallery";
 
 type Props = {
@@ -36,6 +37,7 @@ const PortfolioGalleryModal = ({ images, title, onClose }: Props) => {
           </h5>
         </span>
         <div className="w-full h-[90%] max-h-full flex items-start justify-center overflow-y-auto p-4">
+          // @ts-ignore
           <ImageGallery items={imagesGallery} />
         </div>
       </div>

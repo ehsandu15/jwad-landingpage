@@ -1,7 +1,7 @@
 import { SalesCardType } from "@/services/api";
 import { HTMLAttributes } from "react";
 import { BsCashCoin } from "react-icons/bs";
-import { LuUsers2 } from "react-icons/lu";
+import { FaUsers } from "react-icons/fa";
 import { MdOutlineStorefront } from "react-icons/md";
 import { TfiCup } from "react-icons/tfi";
 import twc from "tw-classnames";
@@ -20,7 +20,7 @@ const SalesCard = async ({ active, data, className, ...rest }: Props) => {
       )}
       {...rest}
     >
-      <div className="w-full flex items-center justify-between max-sm:flex-col gap-12 max-sm:gap-1">
+      <div className="w-full flex items-center justify-between gap-12 max-sm:gap-1">
         <p className="max-sm:text-[14px] text-xl font-normal text-[#4F5057]">
           {data.monthSummaryLabel}
         </p>
@@ -28,7 +28,7 @@ const SalesCard = async ({ active, data, className, ...rest }: Props) => {
           {data.month}
         </p>
       </div>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 justify-between items-center gap-4 w-full">
         <div className="mb-3 flex items-center justify-start gap-2.5">
           <span
             className={twc(
@@ -36,18 +36,18 @@ const SalesCard = async ({ active, data, className, ...rest }: Props) => {
               active && "bg-secondary text-white"
             )}
           >
-            <LuUsers2 />
+            <FaUsers />
           </span>
           <span>
             <p
               className={twc(
-                "max-sm:text-base text-2xl text-primary font-semibold",
+                "max-sm:text-base text-2xl max-md:leading-3 text-primary font-semibold",
                 !active && "text-[#181818]"
               )}
             >
               {data.visitsCount}
             </p>
-            <p className="max-sm:text-[14px] text-xl font-normal text-[#4F5057]">
+            <p className="max-sm:text-[14px] text-xl font-normal text-[#4F5057] max-md:leading-3">
               {data.visitsLabel}
             </p>
           </span>
@@ -64,13 +64,13 @@ const SalesCard = async ({ active, data, className, ...rest }: Props) => {
           <span>
             <p
               className={twc(
-                "max-sm:text-base text-2xl text-primary font-semibold",
+                "max-sm:text-base text-2xl text-primary font-semibold max-md:leading-3",
                 !active && "text-[#181818]"
               )}
             >
               {data.salesCount}
             </p>
-            <p className="max-sm:text-[14px] text-xl font-normal text-[#4F5057]">
+            <p className="max-sm:text-[14px] text-xl font-normal text-[#4F5057] max-md:leading-3">
               {data.salesLabel}
             </p>
           </span>
@@ -87,13 +87,13 @@ const SalesCard = async ({ active, data, className, ...rest }: Props) => {
           <span>
             <p
               className={twc(
-                "max-sm:text-base text-2xl text-primary font-semibold",
+                "max-sm:text-base text-2xl text-primary font-semibold max-md:leading-3",
                 !active && "text-[#181818]"
               )}
             >
               {data.ordersCount}
             </p>
-            <p className="max-sm:text-[14px] text-xl font-normal text-[#4F5057]">
+            <p className="max-sm:text-[14px] text-xl font-normal text-[#4F5057] max-md:leading-3">
               {data.ordersLabel}
             </p>
           </span>
@@ -110,13 +110,13 @@ const SalesCard = async ({ active, data, className, ...rest }: Props) => {
           <span>
             <p
               className={twc(
-                "max-sm:text-base text-2xl text-primary font-semibold",
+                "max-sm:text-base text-2xl text-primary font-semibold max-md:leading-3",
                 !active && "text-[#181818]"
               )}
             >
               {data.monthGoalCount}
             </p>
-            <p className="max-sm:text-[14px] text-xl font-normal text-[#4F5057]">
+            <p className="max-sm:text-[14px] text-xl font-normal text-[#4F5057] max-md:leading-3">
               {data.monthGoalLabel}
             </p>
           </span>

@@ -11,12 +11,12 @@ type Props = {
 function SalesListCarousel({ dataList }: Props) {
   return (
     <EmblaCarousel options={{ direction: "rtl" }}>
-      {dataList?.map((item) => {
+      {dataList?.map((item,idx) => {
         return (
           <SalesCard
             key={item.id}
             data={item.attributes.sales_card[0]}
-            active={false}
+            active={idx === 1}
             className="sales-embla__slide"
           />
         );

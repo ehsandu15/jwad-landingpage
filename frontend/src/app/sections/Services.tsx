@@ -39,7 +39,7 @@ const Services = async () => {
                   </ServiceVideo>
                 </div>
                 <div className="flex items-center px-4 gap-3">
-                  <div className="bg-[#EBEBEB] rounded-full size-12">
+                  <div className="bg-[#EBEBEB] rounded-full size-12 ">
                     <Image
                       src={imagePrefixPath(
                         service.attributes.icon.data.attributes.url
@@ -50,6 +50,7 @@ const Services = async () => {
                       }
                       width={48}
                       height={48}
+                      className="rounded-lg overflow-hidden"
                     />
                   </div>
                   <p className="text-xl font-semibold text-[#181818]">
